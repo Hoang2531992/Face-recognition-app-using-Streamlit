@@ -56,7 +56,7 @@ elif choice == "Webcam":
     cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
     FRAME_WINDOW = st.image([])
     
-    while cap.isOpened():
+    while True:
         ret, frame = cam.read()
         if not ret:
             st.error("Failed to capture frame from camera")
